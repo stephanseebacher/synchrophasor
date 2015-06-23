@@ -4,6 +4,7 @@ in IEEE C37.118.1-2011.
 
 ## Howto?
 In MATLAB, run
+
     >> synchrophasor
 
 To calculate a synchrophasor for one phase, use one of the following
@@ -19,7 +20,7 @@ values from one cycle before and one cycle after the current position i are
 needed.
 
 Unfortunately, calculating multiple phasors at once also doesn't work 
-(e.g. X1(100:200)). If you, for example, want to plot them, you have to do
+(e.g. `X1(100:200)`). If you, for example, want to plot them, you have to do
 a workaround like this:
 
     >> for i = start_index : end_index
@@ -30,5 +31,5 @@ Phasor angles are derived like this:
 
     >> r2d(angle( X1( i )))
 
-*angle* returns the angle of the complex value that is returned by `X1( i )`,
-*r2d* converts this angle from radians to degrees.
+`angle()` returns the angle of the complex value that is returned by `X1( i )`,
+`r2d()` converts this angle from radians to degrees.
