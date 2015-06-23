@@ -19,6 +19,10 @@ than `Fs - (Fs/f)`. The reason for this is that during the calculation, sample
 values from one cycle before and one cycle after the current position i are
 needed.
 
+Phasors for the positive sequence can be calculated by calling
+
+    >> Xp( i )
+
 Unfortunately, calculating multiple phasors at once also doesn't work 
 (e.g. `X1(100:200)`). If you, for example, want to plot them, you have to do
 a workaround like this:
